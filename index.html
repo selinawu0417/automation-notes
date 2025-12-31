@@ -43,30 +43,20 @@
     </h1>
 
     <p>
-      This site documents my automation tools, protocol analysis notes,
+      This site showcases my automation tools, protocol analysis notes,
       and real-world engineering projects.<br><br>
       本網站整理我在實務中開發的自動化工具、通訊協定解析筆記，
-      以及完整的工程專案紀錄。
+      以及完整的工程專案經驗。
     </p>
 
     <div class="cta">
       <a class="btn primary" href="tools/index.html">Explore Tools</a>
-      <a class="btn" href="notes/index.html">Browse Notes</a>
       <a class="btn" href="projects/index.html">View Projects</a>
-    </div>
-
-    <div class="searchbar" style="max-width:680px;">
-      <input data-filter-input placeholder="Search: OMCI, TR-369, IPv6, WAN, AI..." />
-      <span class="badge" data-filter-count></span>
+      <a class="btn" href="notes/index.html">Browse Notes</a>
     </div>
   </div>
 </section>
 
-<!-- ================= TOOLS ================= -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Automation Tools</h2>
 <!-- ================= FEATURED TOOLS ================= -->
 <section>
   <div class="container">
@@ -77,19 +67,18 @@
 
     <div class="grid">
 
-      <!-- Tool 1 -->
       <div class="card span6">
         <h3>Nokia 25G-PON OMCI Log & Packet Analysis Tool</h3>
         <p>
           Parses Nokia 25G-PON OMCI logs and packet data,
           decodes OMCI Managed Entities based on ITU-T G.988,
-          and supports structured analysis and reporting.
+          and exports structured analysis results.
         </p>
         <div class="meta">
           <span class="badge">25G-PON</span>
           <span class="badge">OMCI</span>
           <span class="badge">Python</span>
-          <span class="badge">Public Repo</span>
+          <span class="badge">Public</span>
         </div>
         <div style="margin-top:12px;">
           <a class="btn primary"
@@ -100,19 +89,17 @@
         </div>
       </div>
 
-      <!-- Tool 2 -->
       <div class="card span6">
         <h3>Nokia GPON OLT / ONT Test Tool</h3>
         <p>
           Automation test tool for Nokia GPON OLT and ONT devices,
-          supporting configuration validation, test execution,
-          and result verification.
+          supporting configuration validation and test execution.
         </p>
         <div class="meta">
           <span class="badge">GPON</span>
           <span class="badge">OLT / ONT</span>
           <span class="badge">Python</span>
-          <span class="badge">Public Repo</span>
+          <span class="badge">Public</span>
         </div>
         <div style="margin-top:12px;">
           <a class="btn primary"
@@ -123,19 +110,16 @@
         </div>
       </div>
 
-      <!-- Tool 3 -->
       <div class="card span6">
         <h3>OMCI Log Parsing & Packet Analysis (Lua)</h3>
         <p>
-          Early-stage OMCI parsing and packet analysis tool
-          implemented in Lua, focusing on OMCI message structure
-          and log-based decoding.
+          Early-stage OMCI log parsing and packet analysis tool
+          implemented in Lua, focusing on OMCI message structure.
         </p>
         <div class="meta">
           <span class="badge">OMCI</span>
           <span class="badge">Lua</span>
-          <span class="badge">Packet Analysis</span>
-          <span class="badge">Public Repo</span>
+          <span class="badge">Public</span>
         </div>
         <div style="margin-top:12px;">
           <a class="btn"
@@ -143,132 +127,6 @@
              target="_blank">
             View on GitHub
           </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-      
-      <span>實務開發工具</span>
-    </div>
-
-    <div class="grid">
-
-      <div class="card span6">
-        <h3>OMCI Parser & Analysis Tool</h3>
-        <p>
-          GUI-based OMCI analysis tool that parses console logs or PCAP files,
-          decodes Managed Entities according to ITU-T G.988,
-          and exports Wireshark-aligned Excel reports.
-        </p>
-        <p style="margin-top:10px;color:var(--muted);">
-          OMCI 解析與分析工具，支援 G.988 解碼、VLAN Tagging 位元解析，
-          並輸出與 Wireshark 對齊的 Excel 報告。
-        </p>
-        <div class="meta">
-          <span class="badge">OMCI</span>
-          <span class="badge">G.988</span>
-          <span class="badge">Wireshark</span>
-          <span class="badge">Excel</span>
-        </div>
-      </div>
-
-      <div class="card span6">
-        <h3>AI Packet Diff Tool</h3>
-        <p>
-          Compares two packets or captures and highlights field-level differences,
-          behavioral changes, and potential root causes using AI-assisted summaries.
-        </p>
-        <p style="margin-top:10px;color:var(--muted);">
-          自動比對兩筆封包或 PCAP，找出欄位差異與行為變化，
-          並提供 AI 輔助說明。
-        </p>
-        <div class="meta">
-          <span class="badge">Packet Diff</span>
-          <span class="badge">OMCI</span>
-          <span class="badge">WAN</span>
-          <span class="badge">AI</span>
-        </div>
-      </div>
-
-      <div class="card span6">
-        <h3>TR-369 USP One-Click Test Lab</h3>
-        <p>
-          Docker-based test environment for validating USP Agent and Controller
-          connectivity, message flow, and basic management operations.
-        </p>
-        <p style="margin-top:10px;color:var(--muted);">
-          透過 Docker 一鍵建立 USP Agent / Controller 測試環境，
-          驗證 TR-369 管理流程。
-        </p>
-        <div class="meta">
-          <span class="badge">TR-369</span>
-          <span class="badge">USP</span>
-          <span class="badge">Docker</span>
-          <span class="badge">MQTT</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Engineering Projects</h2>
-      <span>完整工程專案</span>
-    </div>
-
-    <div class="grid">
-
-      <div class="card span12">
-        <h3>PON OMCI AI Analysis Suite</h3>
-        <p>
-          An end-to-end analysis platform integrating OMCI parsing,
-          binary-level decoding, VLAN tagging analysis, packet diff,
-          and automated Excel/TestRail reporting.
-        </p>
-        <p style="margin-top:10px;color:var(--muted);">
-          整合 OMCI 封包解析、位元層解碼、VLAN Tagging 行為分析、
-          封包差異比對與自動化報告輸出的旗艦分析平台。
-        </p>
-        <div class="meta">
-          <span class="badge">G.988</span>
-          <span class="badge">AI Analysis</span>
-          <span class="badge">TestRail</span>
-          <span class="badge">Automation</span>
-        </div>
-      </div>
-
-      <div class="card span6">
-        <h3>WAN IPv4 / IPv6 Automation Framework</h3>
-        <p>
-          Automation framework for validating WAN behavior,
-          including SLAAC, DHCPv6-PD, RA lifecycle,
-          and failure recovery scenarios.
-        </p>
-        <div class="meta">
-          <span class="badge">WAN</span>
-          <span class="badge">IPv6</span>
-          <span class="badge">Automation</span>
-        </div>
-      </div>
-
-      <div class="card span6">
-        <h3>AI-assisted Test Case Generation</h3>
-        <p>
-          Automatically generates structured test cases from protocol behavior
-          and analysis results, with direct TestRail integration.
-        </p>
-        <div class="meta">
-          <span class="badge">AI</span>
-          <span class="badge">Test Case</span>
-          <span class="badge">TestRail</span>
         </div>
       </div>
 
