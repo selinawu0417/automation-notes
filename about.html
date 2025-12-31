@@ -3,76 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Automation Notes | About</title>
-  <meta name="description" content="About Selina and this site." />
+  <title>About | Selina Wu</title>
+  <meta name="description" content="About Selina Wu - Automation and Network Engineer." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar">
-        <a class="brand" href="index.html">
-          <div class="logo" aria-hidden="true"></div>
-          <div class="title">
-            <strong>Automation Notes</strong>
-            <span>Tools • Notes • Projects</span>
-          </div>
-        </a>
-        <div class="navlinks" aria-label="Primary">
-          <a data-nav href="index.html">Home</a>
-          <a data-nav href="tools/index.html">Tools</a>
-          <a data-nav href="notes/index.html">Notes</a>
-          <a data-nav href="projects/index.html">Projects</a>
-          <a data-nav href="about.html">About</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div class="title">
+          <strong>Automation Notes</strong>
+          <span>PON • OMCI • Jenkins • Automation</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="tools/index.html">Tools</a>
+        <a href="projects/index.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
 <section class="hero">
   <div class="container">
-    <div class="kicker">About</div>
-    <h1>Hi, I'm Selina.</h1>
+    <div class="kicker">About Me</div>
+    <h1>Selina Wu</h1>
     <p>
-      I build test automation and analysis tools for networking systems (PON/OMCI/WAN/TR-369).
-      This site collects my tools, notes, and case studies.
+      Automation / Network Engineer<br>
+      Focused on PON, OMCI protocol analysis, and infrastructure automation.
     </p>
-    <div class="grid" style="padding-top:18px;">
-      <div class="card span6">
-        <h3>Focus</h3>
-        <p>OMCI (G.988), WAN IPv4/IPv6, TR-369 USP, TestRail automation, packet analysis.</p>
-      </div>
-      <div class="card span6">
-        <h3>Links</h3>
-        <p>
-          <a class="btn" href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn" href="projects/index.html">Projects</a>
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
-  </main>
+<section>
+  <div class="container">
+    <h2>👩‍💻 Professional Summary</h2>
 
-  <footer class="footer">
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
-        <div>
-          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
-          <span aria-hidden="true"> • </span>
-          <a href="index.html">Back to Home</a>
-        </div>
+    <p>
+      I am an automation-focused engineer with hands-on experience
+      building tools and systems for PON / OMCI analysis,
+      network device testing, and lab infrastructure automation.
+    </p>
+
+    <p>
+      My work emphasizes practical usability, long-term maintainability,
+      and alignment with real operational needs rather than one-off scripts.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>🧠 Technical Focus</h2>
+
+    <ul style="margin-left:20px;">
+      <li>PON / GPON / 25G-PON testing</li>
+      <li>OMCI protocol decoding (ITU-T G.988)</li>
+      <li>Python-based automation tools</li>
+      <li>Jenkins scheduling & job orchestration</li>
+      <li>SSH-based network device automation</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>📬 Contact</h2>
+
+    <p>
+      Email:
+      <a href="mailto:selinawu0417@gmail.com">
+        selinawu0417@gmail.com
+      </a>
+    </p>
+
+    <p style="color:var(--muted);">
+      Feel free to reach out for collaboration, technical discussion,
+      or access requests to private repositories.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between;">
+      <div>© <span id="year"></span> Selina Wu</div>
+      <div>
+        <a href="index.html">Home</a> •
+        <a href="projects/index.html">Projects</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
