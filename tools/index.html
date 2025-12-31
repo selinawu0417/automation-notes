@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Automation Tools | Selina Wu</title>
-  <meta name="description" content="Automation tools for PON, OMCI, WAN, TR-369, and network testing." />
+  <meta name="description" content="Automation tools for PON, OMCI, WAN, and network packet analysis." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
@@ -35,11 +35,10 @@
 <section class="hero">
   <div class="container">
     <div class="kicker">Automation Tools</div>
-    <h1>PON / WAN / TR-369 Automation Tools</h1>
+    <h1>PON / OMCI Automation Tools</h1>
     <p>
-      A curated list of automation tools developed for protocol analysis,
-      device testing, and network validation.<br><br>
-      工具依性質分為 Public / Private，Private Repo 可於需求時提供存取。
+      A curated list of automation tools developed for
+      OMCI packet analysis, device testing, and network validation.
     </p>
   </div>
 </section>
@@ -48,69 +47,96 @@
   <div class="container">
     <div class="grid">
 
+      <!-- ⭐ PON OMCI Packets Analysis Tool -->
+      <div class="card span6">
+        <h3>PON OMCI Packets Analysis Tool</h3>
+        <p>
+          Full-featured OMCI packet analysis tool supporting
+          PCAP parsing, decoding, GUI operation, and reporting.
+        </p>
+        <div class="meta">
+          <span class="badge">OMCI</span>
+          <span class="badge">PCAP</span>
+          <span class="badge">Public</span>
+        </div>
+        <a class="btn primary"
+           href="https://github.com/selinawu0417/PON_OMCI_packets_analysis_tool"
+           target="_blank">
+          View on GitHub
+        </a>
+      </div>
+
       <div class="card span6">
         <h3>Nokia 25G-PON OMCI Log & Packet Analysis Tool</h3>
-        <p>OMCI log / packet parsing and G.988 aligned decoding.</p>
+        <p>OMCI log and packet analysis for Nokia 25G-PON.</p>
         <div class="meta">
           <span class="badge">25G-PON</span>
           <span class="badge">OMCI</span>
           <span class="badge">Public</span>
         </div>
-        <a class="btn" href="https://github.com/selinawu0417/Nokia_25GPON_OMCI_log_parsing_and_OMCI_packets_analysis" target="_blank">View on GitHub</a>
+        <a class="btn"
+           href="https://github.com/selinawu0417/Nokia_25GPON_OMCI_log_parsing_and_OMCI_packets_analysis"
+           target="_blank">
+          View on GitHub
+        </a>
       </div>
 
       <div class="card span6">
         <h3>Nokia GPON OLT / ONT Test Tool</h3>
-        <p>Automation testing tool for Nokia GPON OLT / ONT devices.</p>
+        <p>Automation test tool for Nokia GPON OLT / ONT.</p>
         <div class="meta">
           <span class="badge">GPON</span>
           <span class="badge">OLT / ONT</span>
           <span class="badge">Public</span>
         </div>
-        <a class="btn" href="https://github.com/selinawu0417/Nokia_GPON_OLT_and_GPON_ONT_Test_Tool" target="_blank">View on GitHub</a>
+        <a class="btn"
+           href="https://github.com/selinawu0417/Nokia_GPON_OLT_and_GPON_ONT_Test_Tool"
+           target="_blank">
+          View on GitHub
+        </a>
       </div>
 
       <div class="card span6">
         <h3>OMCI VLAN Tagging Decoder</h3>
-        <p>Bit-level decoding of VLAN Tagging Operation Table.</p>
+        <p>Bit-level VLAN Tagging Operation Table decoder.</p>
         <div class="meta">
           <span class="badge">OMCI</span>
           <span class="badge">VLAN</span>
           <span class="badge">Public</span>
         </div>
-        <a class="btn" href="https://github.com/selinawu0417/Vlan_Tagging_Decoder" target="_blank">View on GitHub</a>
+        <a class="btn"
+           href="https://github.com/selinawu0417/Vlan_Tagging_Decoder"
+           target="_blank">
+          View on GitHub
+        </a>
       </div>
 
       <div class="card span6">
         <h3>Network Ping Test Tool</h3>
-        <p>Python-based network connectivity and latency checker.</p>
+        <p>Network connectivity and latency test tool.</p>
         <div class="meta">
           <span class="badge">Network</span>
-          <span class="badge">Python</span>
           <span class="badge">Public</span>
         </div>
-        <a class="btn" href="https://github.com/selinawu0417/network_ping_test" target="_blank">View on GitHub</a>
+        <a class="btn"
+           href="https://github.com/selinawu0417/network_ping_test"
+           target="_blank">
+          View on GitHub
+        </a>
       </div>
 
       <div class="card span6">
         <h3>Hex / Dec / ASCII Converter</h3>
-        <p>Utility tool for Hex / Decimal / ASCII conversion.</p>
+        <p>Hex / Decimal / ASCII conversion utility.</p>
         <div class="meta">
           <span class="badge">Utility</span>
           <span class="badge">Public</span>
         </div>
-        <a class="btn" href="https://github.com/selinawu0417/Hex-Dec-ASCII-Converter" target="_blank">View on GitHub</a>
-      </div>
-
-      <div class="card span6">
-        <h3>OMCI Parser & Analysis Tool</h3>
-        <p>Advanced OMCI parser with Excel / TestRail integration.</p>
-        <div class="meta">
-          <span class="badge">OMCI</span>
-          <span class="badge">Private</span>
-        </div>
-        <a class="btn" href="https://github.com/selinawu0417/OMCI-log-parsing-and-packets-analysis_v1" target="_blank">View on GitHub</a>
-        </p>
+        <a class="btn"
+           href="https://github.com/selinawu0417/Hex-Dec-ASCII-Convertor"
+           target="_blank">
+          View on GitHub
+        </a>
       </div>
 
     </div>
