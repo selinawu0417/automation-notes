@@ -22,6 +22,7 @@
       <div class="navlinks">
         <a href="../index.html">Home</a>
         <a href="../tools/index.html">Tools</a>
+        <a href="../notes/index.html">Notes</a>
         <a href="index.html">Projects</a>
         <a href="../about.html">About</a>
       </div>
@@ -31,20 +32,18 @@
 
 <main>
 
-<!-- ================= PROJECT HERO ================= -->
 <section class="hero">
   <div class="container">
     <div class="kicker">Automation Project</div>
     <h1>Jenkins-based OLT Configuration Backup Automation</h1>
     <p>
       A production-like automation system running in a lab environment,
-      designed for long-term, scheduled OLT configuration backup across
-      multiple vendors.
+      designed for long-term, scheduled OLT configuration backup
+      across multiple vendors.
     </p>
   </div>
 </section>
 
-<!-- ================= OVERVIEW ================= -->
 <section>
   <div class="container">
     <h2>Project Overview</h2>
@@ -61,86 +60,32 @@
   </div>
 </section>
 
-<!-- ================= ARCHITECTURE ================= -->
 <section>
   <div class="container">
     <h2>Architecture & Workflow</h2>
-
-    <ul style="margin-left:20px;">
+    <ul>
       <li>Jenkins server deployed inside lab network</li>
       <li>Each OLT mapped to an independent Jenkins job</li>
       <li>Scheduled execution via cron triggers</li>
       <li>Python scripts connect to OLT via SSH</li>
       <li>Configuration output stored and versioned</li>
     </ul>
-
-    <p style="margin-top:10px; color:var(--muted);">
-      The design ensures isolation between devices and allows
-      individual failure tracking without impacting other jobs.
-    </p>
   </div>
 </section>
 
-<!-- ================= SUPPORTED DEVICES ================= -->
 <section>
   <div class="container">
-    <h2>Supported OLT Devices</h2>
-
-    <ul style="margin-left:20px;">
-      <li>Nokia FX4</li>
-      <li>Nokia FX8</li>
-      <li>Nokia FX8 Combo 25GPON</li>
-      <li>Huawei MA5683</li>
-      <li>Huawei MA5800-X7</li>
-      <li>ZTE C620</li>
-      <li>ZTE C650</li>
-      <li>GCOM 5610</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= JENKINS ================= -->
-<section>
-  <div class="container">
-    <h2>Jenkins Integration</h2>
-
+    <h2>Jenkins Server</h2>
     <p>
-      Jenkins is used as the execution backbone of the system,
-      providing:
-    </p>
-
-    <ul style="margin-left:20px;">
-      <li>Scheduled job execution</li>
-      <li>Success / failure tracking</li>
-      <li>Execution duration and history</li>
-      <li>Centralized automation management</li>
-    </ul>
-
-    <p style="margin-top:10px;">
-      🔗 Jenkins Server (Lab):
+      Jenkins URL (Lab environment):
       <br>
       <a href="http://10.40.1.250:8080/" target="_blank">
         http://10.40.1.250:8080/
       </a>
     </p>
-
     <p style="color:var(--muted);">
-      *Access limited to internal lab network.*
+      *Accessible only within internal lab network.*
     </p>
-  </div>
-</section>
-
-<!-- ================= VALUE ================= -->
-<section>
-  <div class="container">
-    <h2>Engineering Value</h2>
-
-    <ul style="margin-left:20px;">
-      <li>Eliminates manual configuration backup effort</li>
-      <li>Improves reliability and repeatability</li>
-      <li>Provides historical audit trail</li>
-      <li>Scales easily to additional devices</li>
-    </ul>
   </div>
 </section>
 
