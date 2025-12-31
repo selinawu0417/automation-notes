@@ -1,4 +1,4 @@
-# Automation Notes (GitHub Pages)
+# Automation (GitHub Pages)
 
 This is a lightweight HTML/CSS/JS skeleton for a personal engineering site:
 
