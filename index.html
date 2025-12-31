@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Automation Engineer Portfolio | Selina Wu</title>
-  <meta name="description" content="Automation Engineer portfolio focusing on PON, OMCI, WAN, TR-369, and packet analysis." />
+  <meta name="description" content="Automation Engineer portfolio focusing on PON, OMCI, Jenkins-based OLT automation, and packet analysis." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
         <div class="logo"></div>
         <div class="title">
           <strong>Automation Notes</strong>
-          <span>PON • OMCI • WAN • AI</span>
+          <span>PON • OMCI • Jenkins • Automation</span>
         </div>
       </a>
       <div class="navlinks">
@@ -38,95 +38,65 @@
     <div class="kicker">Automation Engineer Portfolio</div>
 
     <h1>
-      Automation Engineer<br>
-      PON • OMCI • Packet Analysis
+      Network & Test Automation Engineer<br>
+      PON • OMCI • Jenkins-based Infrastructure
     </h1>
 
     <p>
-      This site showcases my automation tools and real-world engineering projects
-      focused on PON / OMCI packet analysis and network testing.<br><br>
-      本網站展示在 PON / OMCI 封包分析與自動化測試領域的實務工具與專案成果。
+      This site documents my real-world automation systems used in lab environments,
+      including Jenkins-based scheduled jobs for OLT configuration backup,
+      OMCI packet analysis tools, and PON testing utilities.<br><br>
+      本網站整理我在實驗室環境中實際運作的自動化系統，
+      包含 Jenkins 排程、自動備份多台 OLT 設定、OMCI 封包分析工具。
     </p>
 
     <div class="cta">
-      <a class="btn primary" href="tools/index.html">Explore Tools</a>
-      <a class="btn" href="projects/index.html">View Projects</a>
-      <a class="btn" href="notes/index.html">Browse Notes</a>
+      <a class="btn primary" href="tools/index.html">Explore Automation Tools</a>
+      <a class="btn" href="projects/index.html">View Automation Projects</a>
     </div>
   </div>
 </section>
 
-<!-- ================= FEATURED TOOLS ================= -->
+<!-- ================= FEATURED SYSTEM ================= -->
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Featured Automation Tools</h2>
-      <span>Public GitHub Repositories</span>
+      <h2>Featured Automation System</h2>
+      <span>Running in Lab Environment</span>
     </div>
 
     <div class="grid">
 
-      <!-- ⭐ 主打工具 -->
-      <div class="card span6">
-        <h3>PON OMCI Packets Analysis Tool</h3>
+      <div class="card span12">
+        <h3>Jenkins-based OLT Configuration Backup Automation</h3>
         <p>
-          A full-featured OMCI packet analysis tool supporting
-          PCAP parsing, OMCI message decoding, and structured analysis.
+          A Jenkins server deployed in the lab environment to automate
+          scheduled OLT configuration backup tasks across multiple vendors.
         </p>
-        <p style="color:var(--muted); margin-top:8px;">
-          提供 GUI / Python Script / EXE，支援 OMCI 封包解析與分析。
-        </p>
-        <div class="meta">
-          <span class="badge">OMCI</span>
-          <span class="badge">PCAP</span>
-          <span class="badge">Python</span>
-          <span class="badge">Public</span>
-        </div>
-        <div style="margin-top:12px;">
-          <a class="btn primary"
-             href="https://github.com/selinawu0417/PON_OMCI_packets_analysis_tool"
-             target="_blank">
-            View on GitHub
-          </a>
-        </div>
-      </div>
 
-      <div class="card span6">
-        <h3>Nokia 25G-PON OMCI Log & Packet Analysis Tool</h3>
-        <p>
-          Parses Nokia 25G-PON OMCI logs and packet data,
-          decoding Managed Entities based on ITU-T G.988.
-        </p>
-        <div class="meta">
-          <span class="badge">25G-PON</span>
-          <span class="badge">OMCI</span>
-          <span class="badge">Public</span>
-        </div>
-        <div style="margin-top:12px;">
-          <a class="btn"
-             href="https://github.com/selinawu0417/Nokia_25GPON_OMCI_log_parsing_and_OMCI_packets_analysis"
-             target="_blank">
-            View on GitHub
-          </a>
-        </div>
-      </div>
+        <ul style="margin-left:20px; margin-top:10px;">
+          <li>Scheduled execution via Jenkins (cron-based)</li>
+          <li>Automated SSH login and configuration dump</li>
+          <li>Multi-vendor OLT support (Nokia / Huawei / ZTE)</li>
+          <li>Per-device job isolation and execution history</li>
+          <li>Stable long-term operation with success / failure tracking</li>
+        </ul>
 
-      <div class="card span6">
-        <h3>Nokia GPON OLT / ONT Test Tool</h3>
-        <p>
-          Automation test tool for Nokia GPON OLT and ONT devices,
-          supporting configuration validation and test execution.
+        <p style="color:var(--muted); margin-top:10px;">
+          Jenkins 排程系統實際管理 8 台 OLT，定期自動備份設定檔，
+          並保留歷史執行紀錄供問題追蹤。
         </p>
+
         <div class="meta">
-          <span class="badge">GPON</span>
-          <span class="badge">OLT / ONT</span>
-          <span class="badge">Public</span>
+          <span class="badge">Jenkins</span>
+          <span class="badge">SSH</span>
+          <span class="badge">Automation</span>
+          <span class="badge">Production-like Lab</span>
         </div>
+
         <div style="margin-top:12px;">
-          <a class="btn"
-             href="https://github.com/selinawu0417/Nokia_GPON_OLT_and_GPON_ONT_Test_Tool"
-             target="_blank">
-            View on GitHub
+          <a class="btn primary" href="tools/index.html">
+            View Related Tools
           </a>
         </div>
       </div>
