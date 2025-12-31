@@ -3,42 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Automation Notes | Home</title>
-  <meta name="description" content="Automation tools & learning notes on GitHub Pages." />
+  <title>Automation Engineer Portfolio | Selina Wu</title>
+  <meta name="description" content="Automation Engineer portfolio focusing on PON, OMCI, WAN, TR-369, and AI-driven packet analysis." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar">
-        <a class="brand" href="index.html">
-          <div class="logo" aria-hidden="true"></div>
-          <div class="title">
-            <strong>Automation Notes</strong>
-            <span>Tools • Notes • Projects</span>
-          </div>
-        </a>
-        <div class="navlinks" aria-label="Primary">
-          <a data-nav href="index.html">Home</a>
-          <a data-nav href="tools/index.html">Tools</a>
-          <a data-nav href="notes/index.html">Notes</a>
-          <a data-nav href="projects/index.html">Projects</a>
-          <a data-nav href="about.html">About</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div class="title">
+          <strong>Automation Notes</strong>
+          <span>PON • OMCI • WAN • AI</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="tools/index.html">Tools</a>
+        <a data-nav href="notes/index.html">Notes</a>
+        <a data-nav href="projects/index.html">Projects</a>
+        <a data-nav href="about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container">
-    <div class="kicker">Personal Knowledge Base</div>
-    <h1>Automation tools & learning notes,<br/>organized like an engineer.</h1>
+    <div class="kicker">Automation Engineer Portfolio</div>
+
+    <h1>
+      Automation Engineer<br>
+      PON • OMCI • WAN • AI-driven Analysis
+    </h1>
+
     <p>
-      A GitHub Pages site to document scripts, test automation, protocol notes, and case studies.
-      Keep it lightweight, searchable, and easy to expand.
+      This site documents my automation tools, protocol analysis notes,
+      and real-world engineering projects.<br><br>
+      本網站整理我在實務中開發的自動化工具、通訊協定解析筆記，
+      以及完整的工程專案紀錄。
     </p>
+
     <div class="cta">
       <a class="btn primary" href="tools/index.html">Explore Tools</a>
       <a class="btn" href="notes/index.html">Browse Notes</a>
@@ -46,107 +56,159 @@
     </div>
 
     <div class="searchbar" style="max-width:680px;">
-      <input data-filter-input placeholder="Search: OMCI, TR-369, IPv6, TestRail..." />
-      <button type="button" onclick="document.querySelector('[data-filter-input]').focus()">Focus</button>
-      <span class="badge" data-filter-count style="align-self:center;"></span>
+      <input data-filter-input placeholder="Search: OMCI, TR-369, IPv6, WAN, AI..." />
+      <span class="badge" data-filter-count></span>
     </div>
   </div>
 </section>
 
+<!-- ================= TOOLS ================= -->
 <section>
   <div class="container">
-    <div class="grid">
-      <div class="card span6">
-        <h3>Tools</h3>
-        <p>GUI tools, scripts, one-click test labs, and demos.</p>
-        <div class="meta">
-          <span class="badge">OMCI Parser</span>
-          <span class="badge">AI Packet Diff</span>
-          <span class="badge">TR-369 USP Lab</span>
-        </div>
-      </div>
-      <div class="card span6">
-        <h3>Notes</h3>
-        <p>Spec digests and engineering summaries that map to real debugging tasks.</p>
-        <div class="meta">
-          <span class="badge">G.988</span>
-          <span class="badge">IPv6</span>
-          <span class="badge">Wi-Fi</span>
-        </div>
-      </div>
-      <div class="card span4">
-        <h3>Projects</h3>
-        <p>End-to-end stories: problem → design → implementation → results.</p>
-      </div>
-      <div class="card span4">
-        <h3>Templates</h3>
-        <p>Reusable templates for test cases, reports, and checklists.</p>
-      </div>
-      <div class="card span4">
-        <h3>Playground</h3>
-        <p>Small experiments, snippets, and quick references.</p>
-      </div>
-    </div>
-
     <div class="section-title">
-      <h2>Quick links</h2>
-      <span>Start here</span>
+      <h2>Automation Tools</h2>
+      <span>實務開發工具</span>
     </div>
 
-    <div class="list" data-filter-list>
-      <div class="item" data-filter-item data-filter-text="omci parser tool g.988 wireshark excel">
-        <a href="tools/omci-parser.html"><strong>OMCI Parser Tool</strong></a>
-        <p class="desc">Parse OMCI logs → structured Excel output with Wireshark-aligned decode.</p>
-        <div class="tags">
-          <span class="badge">Tool</span><span class="badge">OMCI</span><span class="badge">Excel</span>
+    <div class="grid">
+
+      <div class="card span6">
+        <h3>OMCI Parser & Analysis Tool</h3>
+        <p>
+          GUI-based OMCI analysis tool that parses console logs or PCAP files,
+          decodes Managed Entities according to ITU-T G.988,
+          and exports Wireshark-aligned Excel reports.
+        </p>
+        <p style="margin-top:10px;color:var(--muted);">
+          OMCI 解析與分析工具，支援 G.988 解碼、VLAN Tagging 位元解析，
+          並輸出與 Wireshark 對齊的 Excel 報告。
+        </p>
+        <div class="meta">
+          <span class="badge">OMCI</span>
+          <span class="badge">G.988</span>
+          <span class="badge">Wireshark</span>
+          <span class="badge">Excel</span>
         </div>
       </div>
 
-      <div class="item" data-filter-item data-filter-text="ipv6 wan ipoe slaac dhcpv6 pd ra">
-        <a href="notes/wan/ipv6.html"><strong>IPv6 WAN (IPoE: SLAAC/DHCPv6-PD) Notes</strong></a>
-        <p class="desc">RA + SLAAC + DHCPv6-PD: key checks, failure patterns, capture tips.</p>
-        <div class="tags">
-          <span class="badge">Notes</span><span class="badge">IPv6</span><span class="badge">WAN</span>
+      <div class="card span6">
+        <h3>AI Packet Diff Tool</h3>
+        <p>
+          Compares two packets or captures and highlights field-level differences,
+          behavioral changes, and potential root causes using AI-assisted summaries.
+        </p>
+        <p style="margin-top:10px;color:var(--muted);">
+          自動比對兩筆封包或 PCAP，找出欄位差異與行為變化，
+          並提供 AI 輔助說明。
+        </p>
+        <div class="meta">
+          <span class="badge">Packet Diff</span>
+          <span class="badge">OMCI</span>
+          <span class="badge">WAN</span>
+          <span class="badge">AI</span>
         </div>
       </div>
 
-      <div class="item" data-filter-item data-filter-text="tr-369 usp agent controller mqtt docker">
-        <a href="tools/tr369-usp-lab.html"><strong>TR-369 USP One-Click Lab</strong></a>
-        <p class="desc">Local docker-compose lab to validate Agent/Controller connectivity & commands.</p>
-        <div class="tags">
-          <span class="badge">Tool</span><span class="badge">TR-369</span><span class="badge">Docker</span>
+      <div class="card span6">
+        <h3>TR-369 USP One-Click Test Lab</h3>
+        <p>
+          Docker-based test environment for validating USP Agent and Controller
+          connectivity, message flow, and basic management operations.
+        </p>
+        <p style="margin-top:10px;color:var(--muted);">
+          透過 Docker 一鍵建立 USP Agent / Controller 測試環境，
+          驗證 TR-369 管理流程。
+        </p>
+        <div class="meta">
+          <span class="badge">TR-369</span>
+          <span class="badge">USP</span>
+          <span class="badge">Docker</span>
+          <span class="badge">MQTT</span>
         </div>
       </div>
 
-      <div class="item" data-filter-item data-filter-text="ai packet diff compare pcap tshark pyshark">
-        <a href="tools/ai-packet-diff.html"><strong>AI Packet Diff</strong></a>
-        <p class="desc">Compare two packets/captures and explain differences in human language.</p>
-        <div class="tags">
-          <span class="badge">Tool</span><span class="badge">AI</span><span class="badge">PCAP</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-  </main>
+<!-- ================= PROJECTS ================= -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Engineering Projects</h2>
+      <span>完整工程專案</span>
+    </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
-        <div>
-          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
-          <span aria-hidden="true"> • </span>
-          <a href="index.html">Back to Home</a>
+    <div class="grid">
+
+      <div class="card span12">
+        <h3>PON OMCI AI Analysis Suite</h3>
+        <p>
+          An end-to-end analysis platform integrating OMCI parsing,
+          binary-level decoding, VLAN tagging analysis, packet diff,
+          and automated Excel/TestRail reporting.
+        </p>
+        <p style="margin-top:10px;color:var(--muted);">
+          整合 OMCI 封包解析、位元層解碼、VLAN Tagging 行為分析、
+          封包差異比對與自動化報告輸出的旗艦分析平台。
+        </p>
+        <div class="meta">
+          <span class="badge">G.988</span>
+          <span class="badge">AI Analysis</span>
+          <span class="badge">TestRail</span>
+          <span class="badge">Automation</span>
         </div>
       </div>
-    </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="assets/js/main.js"></script>
+      <div class="card span6">
+        <h3>WAN IPv4 / IPv6 Automation Framework</h3>
+        <p>
+          Automation framework for validating WAN behavior,
+          including SLAAC, DHCPv6-PD, RA lifecycle,
+          and failure recovery scenarios.
+        </p>
+        <div class="meta">
+          <span class="badge">WAN</span>
+          <span class="badge">IPv6</span>
+          <span class="badge">Automation</span>
+        </div>
+      </div>
+
+      <div class="card span6">
+        <h3>AI-assisted Test Case Generation</h3>
+        <p>
+          Automatically generates structured test cases from protocol behavior
+          and analysis results, with direct TestRail integration.
+        </p>
+        <div class="meta">
+          <span class="badge">AI</span>
+          <span class="badge">Test Case</span>
+          <span class="badge">TestRail</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+      <div>© <span id="year"></span> Selina Wu</div>
+      <div>
+        <a href="tools/index.html">Tools</a> •
+        <a href="projects/index.html">Projects</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
