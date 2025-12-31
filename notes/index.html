@@ -3,83 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Automation Notes | Notes</title>
-  <meta name="description" content="Notes index." />
+  <title>Notes | Selina Wu</title>
+  <meta name="description" content="Technical notes on PON, OMCI, Jenkins automation, and network protocols." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar">
-        <a class="brand" href="../index.html">
-          <div class="logo" aria-hidden="true"></div>
-          <div class="title">
-            <strong>Automation Notes</strong>
-            <span>Tools • Notes • Projects</span>
-          </div>
-        </a>
-        <div class="navlinks" aria-label="Primary">
-          <a data-nav href="../index.html">Home</a>
-          <a data-nav href="../tools/index.html">Tools</a>
-          <a data-nav href="../notes/index.html">Notes</a>
-          <a data-nav href="../projects/index.html">Projects</a>
-          <a data-nav href="../about.html">About</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a class="brand" href="../index.html">
+        <div class="logo"></div>
+        <div class="title">
+          <strong>Automation Notes</strong>
+          <span>PON • OMCI • Jenkins • Automation</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="../index.html">Home</a>
+        <a href="../tools/index.html">Tools</a>
+        <a href="index.html">Notes</a>
+        <a href="../projects/index.html">Projects</a>
+        <a href="../about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
 <section class="hero">
   <div class="container">
-    <div class="kicker">Notes</div>
-    <h1>Learning notes</h1>
-    <p>Engineer-style notes: key concepts, checklists, and failure patterns.</p>
+    <div class="kicker">Technical Notes</div>
+    <h1>Learning Notes & Engineering Knowledge</h1>
+    <p>
+      Personal study notes and engineering summaries
+      based on real-world debugging and automation work.
+    </p>
+  </div>
+</section>
 
-    <div class="searchbar" style="max-width:680px;">
-      <input data-filter-input placeholder="Filter notes..." />
-      <span class="badge" data-filter-count style="align-self:center;"></span>
-    </div>
+<section>
+  <div class="container">
+    <div class="grid">
 
-    <div class="list" data-filter-list>
-      <div class="item" data-filter-item data-filter-text="g.988 omci managed entity vlan tagging">
-        <a href="pon/g988.html"><strong>G.988 OMCI Digest</strong></a>
-        <p class="desc">Common MEs, message types, and practical decode hints.</p>
-        <div class="tags"><span class="badge">PON</span><span class="badge">OMCI</span></div>
+      <div class="card span6">
+        <h3>PON / GPON / 25G-PON</h3>
+        <ul>
+          <li>GPON vs XG-PON vs 25G-PON overview</li>
+          <li>OLT / ONU interaction model</li>
+          <li>ONU provisioning and service flow</li>
+          <li>Common PON lab issues and troubleshooting</li>
+        </ul>
       </div>
-      <div class="item" data-filter-item data-filter-text="ipv6 wan ipoe slaac dhcpv6 pd ra">
-        <a href="wan/ipv6.html"><strong>IPv6 WAN Networking</strong></a>
-        <p class="desc">RA/SLAAC/DHCPv6-PD checklist and capture tips.</p>
-        <div class="tags"><span class="badge">WAN</span><span class="badge">IPv6</span></div>
+
+      <div class="card span6">
+        <h3>OMCI Protocol (ITU-T G.988)</h3>
+        <ul>
+          <li>OMCI message types and formats</li>
+          <li>Managed Entity (ME) structure</li>
+          <li>VLAN Tagging Operation Table decoding</li>
+          <li>OMCI packet capture and Wireshark analysis</li>
+        </ul>
       </div>
-      <div class="item" data-filter-item data-filter-text="ai testcase generation testrail prompt">
-        <a href="ai/ai-testcase.html"><strong>AI Test Case Generation</strong></a>
-        <p class="desc">Prompt structure + mapping to TestRail fields.</p>
-        <div class="tags"><span class="badge">AI</span><span class="badge">TestRail</span></div>
+
+      <div class="card span6">
+        <h3>Jenkins & Automation</h3>
+        <ul>
+          <li>Jenkins job design for lab automation</li>
+          <li>cron scheduling best practices</li>
+          <li>Job isolation per device</li>
+          <li>Failure visibility and retry strategy</li>
+        </ul>
       </div>
+
+      <div class="card span6">
+        <h3>Network Automation</h3>
+        <ul>
+          <li>SSH automation with Python</li>
+          <li>Configuration backup strategies</li>
+          <li>Multi-vendor device handling</li>
+          <li>Automation safety considerations</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
 
-  </main>
+</main>
 
-  <footer class="footer">
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
-        <div>
-          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
-          <span aria-hidden="true"> • </span>
-          <a href="../index.html">Back to Home</a>
-        </div>
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between;">
+      <div>© <span id="year"></span> Selina Wu</div>
+      <div>
+        <a href="../index.html">Home</a> •
+        <a href="../projects/index.html">Projects</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="../assets/js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
