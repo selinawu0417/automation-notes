@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Automation Engineer Portfolio | Selina Wu</title>
-  <meta name="description" content="Automation Engineer portfolio focusing on PON, OMCI, WAN, TR-369, and AI-driven packet analysis." />
+  <meta name="description" content="Automation Engineer portfolio focusing on PON, OMCI, WAN, TR-369, and packet analysis." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -39,14 +39,13 @@
 
     <h1>
       Automation Engineer<br>
-      PON • OMCI • WAN • AI-driven Analysis
+      PON • OMCI • Packet Analysis
     </h1>
 
     <p>
-      This site showcases my automation tools, protocol analysis notes,
-      and real-world engineering projects.<br><br>
-      本網站整理我在實務中開發的自動化工具、通訊協定解析筆記，
-      以及完整的工程專案經驗。
+      This site showcases my automation tools and real-world engineering projects
+      focused on PON / OMCI packet analysis and network testing.<br><br>
+      本網站展示我在 PON / OMCI 封包分析與自動化測試領域的實務工具與專案成果。
     </p>
 
     <div class="cta">
@@ -67,21 +66,44 @@
 
     <div class="grid">
 
+      <!-- ⭐ 主打工具 -->
       <div class="card span6">
-        <h3>Nokia 25G-PON OMCI Log & Packet Analysis Tool</h3>
+        <h3>PON OMCI Packets Analysis Tool</h3>
         <p>
-          Parses Nokia 25G-PON OMCI logs and packet data,
-          decodes OMCI Managed Entities based on ITU-T G.988,
-          and exports structured analysis results.
+          A full-featured OMCI packet analysis tool supporting
+          PCAP parsing, OMCI message decoding, and structured analysis.
+        </p>
+        <p style="color:var(--muted); margin-top:8px;">
+          提供 GUI / Python Script / EXE，支援 OMCI 封包解析與分析。
         </p>
         <div class="meta">
-          <span class="badge">25G-PON</span>
           <span class="badge">OMCI</span>
+          <span class="badge">PCAP</span>
           <span class="badge">Python</span>
           <span class="badge">Public</span>
         </div>
         <div style="margin-top:12px;">
           <a class="btn primary"
+             href="https://github.com/selinawu0417/PON_OMCI_packets_analysis_tool"
+             target="_blank">
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="card span6">
+        <h3>Nokia 25G-PON OMCI Log & Packet Analysis Tool</h3>
+        <p>
+          Parses Nokia 25G-PON OMCI logs and packet data,
+          decoding Managed Entities based on ITU-T G.988.
+        </p>
+        <div class="meta">
+          <span class="badge">25G-PON</span>
+          <span class="badge">OMCI</span>
+          <span class="badge">Public</span>
+        </div>
+        <div style="margin-top:12px;">
+          <a class="btn"
              href="https://github.com/selinawu0417/Nokia_25GPON_OMCI_log_parsing_and_OMCI_packets_analysis"
              target="_blank">
             View on GitHub
@@ -98,32 +120,11 @@
         <div class="meta">
           <span class="badge">GPON</span>
           <span class="badge">OLT / ONT</span>
-          <span class="badge">Python</span>
-          <span class="badge">Public</span>
-        </div>
-        <div style="margin-top:12px;">
-          <a class="btn primary"
-             href="https://github.com/selinawu0417/Nokia_GPON_OLT_and_GPON_ONT_Test_Tool"
-             target="_blank">
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="card span6">
-        <h3>OMCI Log Parsing & Packet Analysis (Lua)</h3>
-        <p>
-          Early-stage OMCI log parsing and packet analysis tool
-          implemented in Lua, focusing on OMCI message structure.
-        </p>
-        <div class="meta">
-          <span class="badge">OMCI</span>
-          <span class="badge">Lua</span>
           <span class="badge">Public</span>
         </div>
         <div style="margin-top:12px;">
           <a class="btn"
-             href="https://github.com/selinawu0417/OMCI-log-parsing-and-packets-analysis_v1"
+             href="https://github.com/selinawu0417/Nokia_GPON_OLT_and_GPON_ONT_Test_Tool"
              target="_blank">
             View on GitHub
           </a>
