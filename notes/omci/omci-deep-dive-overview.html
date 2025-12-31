@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OMCI Deep Dive | Selina Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="In-depth OMCI protocol explanation based on real-world PON and automation experience." />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a class="brand" href="../../index.html">
+        <div class="logo"></div>
+        <div class="title">
+          <strong>Automation Notes</strong>
+          <span>PON • OMCI • Jenkins • Automation</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../tools/index.html">Tools</a>
+        <a href="../index.html">Notes</a>
+        <a href="../../projects/index.html">Projects</a>
+        <a href="../../about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <div class="kicker">OMCI Deep Dive</div>
+    <h1>Understanding OMCI from Real-world PON Operations</h1>
+    <p>
+      A practical and engineering-oriented explanation of OMCI,
+      focusing on how it is actually used, analyzed, and automated
+      in PON lab environments.
+    </p>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section>
+  <div class="container">
+    <h2>1. What OMCI Really Is (Beyond the Spec)</h2>
+
+    <p>
+      OMCI (ONT Management and Control Interface), defined in
+      <strong>ITU-T G.988</strong>, is the management protocol used
+      by an OLT to control and configure ONU devices.
+    </p>
+
+    <p>
+      In theory, OMCI is described as a set of messages and Managed Entities.
+      In practice, OMCI is the <strong>backbone of service provisioning</strong>:
+    </p>
+
+    <ul>
+      <li>VLAN configuration</li>
+      <li>Service mapping (Internet / IPTV / VoIP)</li>
+      <li>ONU capability discovery</li>
+      <li>Performance monitoring</li>
+    </ul>
+
+    <p>
+      If OMCI fails or behaves unexpectedly, services may appear
+      partially working, unstable, or misconfigured.
+    </p>
+  </div>
+</section>
+
+<!-- ================= ME ================= -->
+<section>
+  <div class="container">
+    <h2>2. Managed Entities: The Core Abstraction</h2>
+
+    <p>
+      OMCI does not configure devices using CLI-like commands.
+      Instead, everything is represented as <strong>Managed Entities (MEs)</strong>.
+    </p>
+
+    <p>
+      Each ME is identified by:
+    </p>
+
+    <ul>
+      <li>Class ID (e.g. 2 = ONU Data, 171 = VLAN Tagging Operation Table)</li>
+      <li>Entity ID (instance number)</li>
+      <li>Attributes (fixed structure defined by G.988)</li>
+    </ul>
+
+    <p>
+      From an engineering perspective, this means:
+    </p>
+
+    <blockquote>
+      “Provisioning a service = creating, modifying, and linking multiple MEs.”
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= MESSAGE FLOW ================= -->
+<section>
+  <div class="container">
+    <h2>3. OMCI Message Flow in Real Networks</h2>
+
+    <p>
+      Typical OMCI interaction follows a predictable lifecycle:
+    </p>
+
+    <ol>
+      <li>ONU power-on and OMCI channel establishment</li>
+      <li>OLT queries ONU capabilities (Get / Get All Alarms)</li>
+      <li>OLT creates service-related MEs (Create)</li>
+      <li>OLT modifies attributes (Set)</li>
+      <li>ONU reports status and alarms</li>
+    </ol>
+
+    <p>
+      In packet captures, this translates to long sequences of
+      OMCI frames that must be interpreted <strong>in context</strong>,
+      not individually.
+    </p>
+  </div>
+</section>
+
+<!-- ================= VLAN ================= -->
+<section>
+  <div class="container">
+    <h2>4. VLAN Tagging Operation Table: Why It Is Hard</h2>
+
+    <p>
+      One of the most complex MEs in real deployments is
+      <strong>ME 171 – VLAN Tagging Operation Table</strong>.
+    </p>
+
+    <p>
+      Reasons it is difficult to debug:
+    </p>
+
+    <ul>
+      <li>Bit-level encoding</li>
+      <li>Multiple filter / treatment stages</li>
+      <li>Vendor-specific behavior</li>
+      <li>Mismatch between spec and implementation</li>
+    </ul>
+
+    <p>
+      This complexity is exactly why automated decoders
+      and visual analysis tools are necessary.
+    </p>
+
+    <p>
+      (See: <a href="../../tools/index.html">VLAN Tagging Decoder Tool</a>)
+    </p>
+  </div>
+</section>
+
+<!-- ================= AUTOMATION ================= -->
+<section>
+  <div class="container">
+    <h2>5. Why OMCI Analysis Benefits from Automation</h2>
+
+    <p>
+      Manual OMCI analysis does not scale:
+    </p>
+
+    <ul>
+      <li>Large PCAP files</li>
+      <li>Long provisioning sequences</li>
+      <li>Repetitive verification tasks</li>
+    </ul>
+
+    <p>
+      Automation enables:
+    </p>
+
+    <ul>
+      <li>Consistent decoding</li>
+      <li>Batch comparison between runs</li>
+      <li>Integration with Jenkins-based workflows</li>
+    </ul>
+
+    <p>
+      This is why OMCI analysis tools and infrastructure automation
+      should be designed together, not separately.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section>
+  <div class="container">
+    <h2>6. Summary</h2>
+
+    <p>
+      OMCI is not just a protocol to be “understood once”.
+      It is an operational interface that directly affects
+      service stability and customer experience.
+    </p>
+
+    <p>
+      Engineers who can:
+    </p>
+
+    <ul>
+      <li>Read OMCI packets</li>
+      <li>Understand ME relationships</li>
+      <li>Automate analysis and verification</li>
+    </ul>
+
+    <p>
+      have a significant advantage in PON-related roles.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Selina Wu</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
