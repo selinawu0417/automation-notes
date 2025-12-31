@@ -3,83 +3,164 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Automation Notes | Projects</title>
-  <meta name="description" content="Projects index." />
+  <title>Projects | Selina Wu</title>
+  <meta name="description" content="Automation projects including Jenkins-based OLT automation and OMCI packet analysis systems." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar">
-        <a class="brand" href="../index.html">
-          <div class="logo" aria-hidden="true"></div>
-          <div class="title">
-            <strong>Automation Notes</strong>
-            <span>Tools • Notes • Projects</span>
-          </div>
-        </a>
-        <div class="navlinks" aria-label="Primary">
-          <a data-nav href="../index.html">Home</a>
-          <a data-nav href="../tools/index.html">Tools</a>
-          <a data-nav href="../notes/index.html">Notes</a>
-          <a data-nav href="../projects/index.html">Projects</a>
-          <a data-nav href="../about.html">About</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a class="brand" href="../index.html">
+        <div class="logo"></div>
+        <div class="title">
+          <strong>Automation Notes</strong>
+          <span>PON • OMCI • Jenkins • Automation</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="../index.html">Home</a>
+        <a href="../tools/index.html">Tools</a>
+        <a href="index.html">Projects</a>
+        <a href="../about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= PROJECT HERO ================= -->
 <section class="hero">
   <div class="container">
-    <div class="kicker">Projects</div>
-    <h1>Case studies</h1>
-    <p>Problem → architecture → implementation → outcomes.</p>
-
-    <div class="searchbar" style="max-width:680px;">
-      <input data-filter-input placeholder="Filter projects..." />
-      <span class="badge" data-filter-count style="align-self:center;"></span>
-    </div>
-
-    <div class="list" data-filter-list>
-      <div class="item" data-filter-item data-filter-text="pon omci ai analysis suite wireshark excel testrail">
-        <a href="pon-ai-suite.html"><strong>PON OMCI AI Analysis Suite</strong></a>
-        <p class="desc">End-to-end OMCI parsing, decode, diff, and TestRail integration.</p>
-        <div class="tags"><span class="badge">PON</span><span class="badge">AI</span><span class="badge">Automation</span></div>
-      </div>
-      <div class="item" data-filter-item data-filter-text="wan ipv6 automation capture pyshark">
-        <a href="wan-automation.html"><strong>WAN Automation (IPv4/IPv6)</strong></a>
-        <p class="desc">Packet capture + assertions + report generation.</p>
-        <div class="tags"><span class="badge">WAN</span><span class="badge">Testing</span></div>
-      </div>
-      <div class="item" data-filter-item data-filter-text="tr-369 usp controller agent mqtt docker">
-        <a href="usp-lab-project.html"><strong>TR-369 USP Lab</strong></a>
-        <p class="desc">A reproducible Docker lab for Agent/Controller validation.</p>
-        <div class="tags"><span class="badge">TR-369</span><span class="badge">Docker</span></div>
-      </div>
-    </div>
+    <div class="kicker">Automation Project</div>
+    <h1>Jenkins-based OLT Configuration Backup Automation</h1>
+    <p>
+      A production-like automation system running in a lab environment,
+      designed for long-term, scheduled OLT configuration backup across
+      multiple vendors.
+    </p>
   </div>
 </section>
 
-  </main>
+<!-- ================= OVERVIEW ================= -->
+<section>
+  <div class="container">
+    <h2>📌 Project Overview</h2>
+    <p>
+      This project addresses the operational need to reliably back up
+      configuration data from multiple Optical Line Terminals (OLTs)
+      in a laboratory environment.
+    </p>
+    <p>
+      Instead of running ad-hoc scripts manually, the system is built
+      on top of a Jenkins server to provide scheduling, execution history,
+      and failure visibility.
+    </p>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
-        <div>
-          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
-          <span aria-hidden="true"> • </span>
-          <a href="../index.html">Back to Home</a>
-        </div>
+<!-- ================= ARCHITECTURE ================= -->
+<section>
+  <div class="container">
+    <h2>🏗 Architecture & Workflow</h2>
+
+    <ul style="margin-left:20px;">
+      <li>Jenkins server deployed inside lab network</li>
+      <li>Each OLT mapped to an independent Jenkins job</li>
+      <li>Scheduled execution via cron triggers</li>
+      <li>Python scripts connect to OLT via SSH</li>
+      <li>Configuration output stored and versioned</li>
+    </ul>
+
+    <p style="margin-top:10px; color:var(--muted);">
+      The design ensures isolation between devices and allows
+      individual failure tracking without impacting other jobs.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SUPPORTED DEVICES ================= -->
+<section>
+  <div class="container">
+    <h2>🔌 Supported OLT Devices</h2>
+
+    <ul style="margin-left:20px;">
+      <li>Nokia FX4</li>
+      <li>Nokia FX8</li>
+      <li>Nokia FX8 Combo 25GPON</li>
+      <li>Huawei MA5683</li>
+      <li>Huawei MA5800-X7</li>
+      <li>ZTE C620</li>
+      <li>ZTE C650</li>
+      <li>GCOM 5610</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= JENKINS ================= -->
+<section>
+  <div class="container">
+    <h2>🛠 Jenkins Integration</h2>
+
+    <p>
+      Jenkins is used as the execution backbone of the system,
+      providing:
+    </p>
+
+    <ul style="margin-left:20px;">
+      <li>Scheduled job execution</li>
+      <li>Success / failure tracking</li>
+      <li>Execution duration and history</li>
+      <li>Centralized automation management</li>
+    </ul>
+
+    <p style="margin-top:10px;">
+      🔗 Jenkins Server (Lab):
+      <br>
+      <a href="http://10.40.1.250:8080/" target="_blank">
+        http://10.40.1.250:8080/
+      </a>
+    </p>
+
+    <p style="color:var(--muted);">
+      *Access limited to internal lab network.*
+    </p>
+  </div>
+</section>
+
+<!-- ================= VALUE ================= -->
+<section>
+  <div class="container">
+    <h2>🚀 Engineering Value</h2>
+
+    <ul style="margin-left:20px;">
+      <li>Eliminates manual configuration backup effort</li>
+      <li>Improves reliability and repeatability</li>
+      <li>Provides historical audit trail</li>
+      <li>Scales easily to additional devices</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between;">
+      <div>© <span id="year"></span> Selina Wu</div>
+      <div>
+        <a href="../index.html">Home</a> •
+        <a href="../tools/index.html">Tools</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="../assets/js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
