@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Notes | About</title>
+  <meta name="description" content="About Selina and this site." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="tools/index.html">Tools</a>
+          <a data-nav href="notes/index.html">Notes</a>
+          <a data-nav href="projects/index.html">Projects</a>
+          <a data-nav href="about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">About</div>
+    <h1>Hi, I'm Selina.</h1>
+    <p>
+      I build test automation and analysis tools for networking systems (PON/OMCI/WAN/TR-369).
+      This site collects my tools, notes, and case studies.
+    </p>
+    <div class="grid" style="padding-top:18px;">
+      <div class="card span6">
+        <h3>Focus</h3>
+        <p>OMCI (G.988), WAN IPv4/IPv6, TR-369 USP, TestRail automation, packet analysis.</p>
+      </div>
+      <div class="card span6">
+        <h3>Links</h3>
+        <p>
+          <a class="btn" href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="projects/index.html">Projects</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

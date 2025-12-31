@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Notes | Home</title>
+  <meta name="description" content="Automation tools & learning notes on GitHub Pages." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="tools/index.html">Tools</a>
+          <a data-nav href="notes/index.html">Notes</a>
+          <a data-nav href="projects/index.html">Projects</a>
+          <a data-nav href="about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Personal Knowledge Base</div>
+    <h1>Automation tools & learning notes,<br/>organized like an engineer.</h1>
+    <p>
+      A GitHub Pages site to document scripts, test automation, protocol notes, and case studies.
+      Keep it lightweight, searchable, and easy to expand.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="tools/index.html">Explore Tools</a>
+      <a class="btn" href="notes/index.html">Browse Notes</a>
+      <a class="btn" href="projects/index.html">View Projects</a>
+    </div>
+
+    <div class="searchbar" style="max-width:680px;">
+      <input data-filter-input placeholder="Search: OMCI, TR-369, IPv6, TestRail..." />
+      <button type="button" onclick="document.querySelector('[data-filter-input]').focus()">Focus</button>
+      <span class="badge" data-filter-count style="align-self:center;"></span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid">
+      <div class="card span6">
+        <h3>Tools</h3>
+        <p>GUI tools, scripts, one-click test labs, and demos.</p>
+        <div class="meta">
+          <span class="badge">OMCI Parser</span>
+          <span class="badge">AI Packet Diff</span>
+          <span class="badge">TR-369 USP Lab</span>
+        </div>
+      </div>
+      <div class="card span6">
+        <h3>Notes</h3>
+        <p>Spec digests and engineering summaries that map to real debugging tasks.</p>
+        <div class="meta">
+          <span class="badge">G.988</span>
+          <span class="badge">IPv6</span>
+          <span class="badge">Wi-Fi</span>
+        </div>
+      </div>
+      <div class="card span4">
+        <h3>Projects</h3>
+        <p>End-to-end stories: problem → design → implementation → results.</p>
+      </div>
+      <div class="card span4">
+        <h3>Templates</h3>
+        <p>Reusable templates for test cases, reports, and checklists.</p>
+      </div>
+      <div class="card span4">
+        <h3>Playground</h3>
+        <p>Small experiments, snippets, and quick references.</p>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h2>Quick links</h2>
+      <span>Start here</span>
+    </div>
+
+    <div class="list" data-filter-list>
+      <div class="item" data-filter-item data-filter-text="omci parser tool g.988 wireshark excel">
+        <a href="tools/omci-parser.html"><strong>OMCI Parser Tool</strong></a>
+        <p class="desc">Parse OMCI logs → structured Excel output with Wireshark-aligned decode.</p>
+        <div class="tags">
+          <span class="badge">Tool</span><span class="badge">OMCI</span><span class="badge">Excel</span>
+        </div>
+      </div>
+
+      <div class="item" data-filter-item data-filter-text="ipv6 wan ipoe slaac dhcpv6 pd ra">
+        <a href="notes/wan/ipv6.html"><strong>IPv6 WAN (IPoE: SLAAC/DHCPv6-PD) Notes</strong></a>
+        <p class="desc">RA + SLAAC + DHCPv6-PD: key checks, failure patterns, capture tips.</p>
+        <div class="tags">
+          <span class="badge">Notes</span><span class="badge">IPv6</span><span class="badge">WAN</span>
+        </div>
+      </div>
+
+      <div class="item" data-filter-item data-filter-text="tr-369 usp agent controller mqtt docker">
+        <a href="tools/tr369-usp-lab.html"><strong>TR-369 USP One-Click Lab</strong></a>
+        <p class="desc">Local docker-compose lab to validate Agent/Controller connectivity & commands.</p>
+        <div class="tags">
+          <span class="badge">Tool</span><span class="badge">TR-369</span><span class="badge">Docker</span>
+        </div>
+      </div>
+
+      <div class="item" data-filter-item data-filter-text="ai packet diff compare pcap tshark pyshark">
+        <a href="tools/ai-packet-diff.html"><strong>AI Packet Diff</strong></a>
+        <p class="desc">Compare two packets/captures and explain differences in human language.</p>
+        <div class="tags">
+          <span class="badge">Tool</span><span class="badge">AI</span><span class="badge">PCAP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
