@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tool | TR-369 USP Lab</title>
+  <meta name="description" content="TR-369 USP lab tool page." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="../index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="../index.html">Home</a>
+          <a data-nav href="../tools/index.html">Tools</a>
+          <a data-nav href="../notes/index.html">Notes</a>
+          <a data-nav href="../projects/index.html">Projects</a>
+          <a data-nav href="../about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Tool</div>
+    <h1>TR-369 USP One-Click Lab</h1>
+    <p>Run a reproducible USP Agent/Controller lab using Docker Compose.</p>
+
+    <div class="grid">
+      <div class="card span6">
+        <h3>What it solves</h3>
+        <p>Describe the pain point and the user journey in 3–5 bullets.</p>
+        <div class="meta">
+          <span class="badge">Input</span><span class="badge">Process</span><span class="badge">Output</span>
+        </div>
+      </div>
+      <div class="card span6">
+        <h3>How to run</h3>
+        <pre><code>docker compose up -d
+# run a smoke test
+python scripts/usp_smoke_test.py --controller http://localhost:8080</code></pre>
+      </div>
+      <div class="card span12">
+        <h3>Architecture</h3>
+        <p>Add an architecture diagram (PNG/SVG) later. For now, keep a simple list:</p>
+        <ul>
+          <li>Module A: ...</li>
+          <li>Module B: ...</li>
+          <li>Export: ...</li>
+        </ul>
+      </div>
+      <div class="card span12">
+        <h3>Demo / screenshots</h3>
+        <p>Put images under <code>assets/images/</code> and reference them here.</p>
+        <pre><code>&lt;img src="../assets/images/demo.png" alt="demo" style="max-width:100%; border-radius:14px;" /&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="../index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

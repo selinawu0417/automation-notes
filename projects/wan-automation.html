@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project | WAN Automation</title>
+  <meta name="description" content="WAN automation project." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="../index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="../index.html">Home</a>
+          <a data-nav href="../tools/index.html">Tools</a>
+          <a data-nav href="../notes/index.html">Notes</a>
+          <a data-nav href="../projects/index.html">Projects</a>
+          <a data-nav href="../about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Project</div>
+    <h1>WAN Automation (IPv4/IPv6)</h1>
+    <p>Capture, validate, and report WAN sessions with reusable checks.</p>
+
+    <div class="grid">
+      <div class="card span6">
+        <h3>Problem</h3>
+        <p>What pain existed? Who suffered? What was slow/risky?</p>
+      </div>
+      <div class="card span6">
+        <h3>Outcome</h3>
+        <p>What improved? Time saved? Defects found? Coverage increased?</p>
+      </div>
+      <div class="card span12">
+        <h3>Architecture</h3>
+        <p>Insert a diagram later. For now, keep a sequence list.</p>
+        <ol>
+          <li>Input collection (logs/pcap/config)</li>
+          <li>Parsing + normalization</li>
+          <li>Analysis (rules/AI)</li>
+          <li>Export (Excel/TestRail/HTML report)</li>
+        </ol>
+      </div>
+      <div class="card span12">
+        <h3>Implementation notes</h3>
+        <pre><code>Examples:
+- Verify RA default route install/remove
+- Validate DHCPv6-PD and LAN prefix assignment
+- Export summary + anomalies
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="../index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

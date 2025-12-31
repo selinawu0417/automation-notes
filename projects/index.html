@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Notes | Projects</title>
+  <meta name="description" content="Projects index." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="../index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="../index.html">Home</a>
+          <a data-nav href="../tools/index.html">Tools</a>
+          <a data-nav href="../notes/index.html">Notes</a>
+          <a data-nav href="../projects/index.html">Projects</a>
+          <a data-nav href="../about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Projects</div>
+    <h1>Case studies</h1>
+    <p>Problem → architecture → implementation → outcomes.</p>
+
+    <div class="searchbar" style="max-width:680px;">
+      <input data-filter-input placeholder="Filter projects..." />
+      <span class="badge" data-filter-count style="align-self:center;"></span>
+    </div>
+
+    <div class="list" data-filter-list>
+      <div class="item" data-filter-item data-filter-text="pon omci ai analysis suite wireshark excel testrail">
+        <a href="pon-ai-suite.html"><strong>PON OMCI AI Analysis Suite</strong></a>
+        <p class="desc">End-to-end OMCI parsing, decode, diff, and TestRail integration.</p>
+        <div class="tags"><span class="badge">PON</span><span class="badge">AI</span><span class="badge">Automation</span></div>
+      </div>
+      <div class="item" data-filter-item data-filter-text="wan ipv6 automation capture pyshark">
+        <a href="wan-automation.html"><strong>WAN Automation (IPv4/IPv6)</strong></a>
+        <p class="desc">Packet capture + assertions + report generation.</p>
+        <div class="tags"><span class="badge">WAN</span><span class="badge">Testing</span></div>
+      </div>
+      <div class="item" data-filter-item data-filter-text="tr-369 usp controller agent mqtt docker">
+        <a href="usp-lab-project.html"><strong>TR-369 USP Lab</strong></a>
+        <p class="desc">A reproducible Docker lab for Agent/Controller validation.</p>
+        <div class="tags"><span class="badge">TR-369</span><span class="badge">Docker</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="../index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

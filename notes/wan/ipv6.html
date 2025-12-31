@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Note | IPv6 WAN Networking</title>
+  <meta name="description" content="IPv6 WAN networking note." />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="../../index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="../../index.html">Home</a>
+          <a data-nav href="../../tools/index.html">Tools</a>
+          <a data-nav href="../../notes/index.html">Notes</a>
+          <a data-nav href="../../projects/index.html">Projects</a>
+          <a data-nav href="../../about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Note</div>
+    <h1>IPv6 WAN Networking (IPoE)</h1>
+    <p>RA + SLAAC + DHCPv6-PD checklist aligned with typical ISP deployment.</p>
+
+    <div class="grid">
+      <div class="card span6">
+        <h3>Key concepts</h3>
+        <ul>
+          <li>Concept 1</li>
+          <li>Concept 2</li>
+          <li>Concept 3</li>
+        </ul>
+      </div>
+      <div class="card span6">
+        <h3>Checklist</h3>
+        <ul>
+          <li>Check A</li>
+          <li>Check B</li>
+          <li>Check C</li>
+        </ul>
+      </div>
+      <div class="card span12">
+        <h3>Common failure patterns</h3>
+        <p>Write practical symptoms and how to confirm via logs/pcap.</p>
+        <pre><code>Quick checks:
+- RA seen on WAN? default route installed?
+- Link-local present? DAD pass?
+- DHCPv6-PD obtained? prefix delegated to LAN?
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="../../index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

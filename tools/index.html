@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Notes | Tools</title>
+  <meta name="description" content="Automation tools index." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="brand" href="../index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <strong>Automation Notes</strong>
+            <span>Tools • Notes • Projects</span>
+          </div>
+        </a>
+        <div class="navlinks" aria-label="Primary">
+          <a data-nav href="../index.html">Home</a>
+          <a data-nav href="../tools/index.html">Tools</a>
+          <a data-nav href="../notes/index.html">Notes</a>
+          <a data-nav href="../projects/index.html">Projects</a>
+          <a data-nav href="../about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Tools</div>
+    <h1>Automation tools</h1>
+    <p>Tool pages describe what the tool solves, how it works, and how to run it.</p>
+
+    <div class="searchbar" style="max-width:680px;">
+      <input data-filter-input placeholder="Filter tools..." />
+      <span class="badge" data-filter-count style="align-self:center;"></span>
+    </div>
+
+    <div class="list" data-filter-list>
+      <div class="item" data-filter-item data-filter-text="omci parser wireshark excel g.988">
+        <a href="omci-parser.html"><strong>OMCI Parser Tool</strong></a>
+        <p class="desc">OMCI log → PCAP/Excel decode, Wireshark-aligned output.</p>
+        <div class="tags"><span class="badge">OMCI</span><span class="badge">Python</span></div>
+      </div>
+      <div class="item" data-filter-item data-filter-text="ai packet diff compare pcap pyshark tshark">
+        <a href="ai-packet-diff.html"><strong>AI Packet Diff</strong></a>
+        <p class="desc">Explain differences between two packets/captures.</p>
+        <div class="tags"><span class="badge">AI</span><span class="badge">PCAP</span></div>
+      </div>
+      <div class="item" data-filter-item data-filter-text="tr-369 usp agent controller mqtt docker compose">
+        <a href="tr369-usp-lab.html"><strong>TR-369 USP One-Click Lab</strong></a>
+        <p class="desc">Docker-based lab to validate USP Agent/Controller quickly.</p>
+        <div class="tags"><span class="badge">TR-369</span><span class="badge">Docker</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Selina • Built with GitHub Pages</div>
+        <div>
+          <a href="https://github.com/selinawu0417" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true"> • </span>
+          <a href="../index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
