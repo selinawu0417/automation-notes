@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Notes | Selina Wu</title>
-  <meta name="description" content="Technical notes on PON, OMCI, Jenkins automation, and network protocols." />
+  <meta name="description" content="Technical notes on PON, OMCI, Jenkins automation, and network engineering." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
@@ -22,7 +22,7 @@
       <div class="navlinks">
         <a href="../index.html">Home</a>
         <a href="../tools/index.html">Tools</a>
-        <a href="index.html">Notes</a>
+        <a href="index.html" class="active">Notes</a>
         <a href="../projects/index.html">Projects</a>
         <a href="../about.html">About</a>
       </div>
@@ -32,59 +32,93 @@
 
 <main>
 
+<!-- ================= NOTES HERO ================= -->
 <section class="hero">
   <div class="container">
-    <div class="kicker">Technical Notes</div>
-    <h1>Learning Notes & Engineering Knowledge</h1>
+    <div class="kicker">Knowledge Base</div>
+    <h1>Engineering Notes</h1>
     <p>
-      Personal study notes and engineering summaries
-      based on real-world debugging and automation work.
+      Structured learning notes based on real-world automation,
+      protocol analysis, and lab operation experience.
     </p>
   </div>
 </section>
 
+<!-- ================= NOTES CATEGORIES ================= -->
 <section>
   <div class="container">
     <div class="grid">
 
+      <!-- PON -->
       <div class="card span6">
         <h3>PON / GPON / 25G-PON</h3>
-        <ul>
-          <li>GPON vs XG-PON vs 25G-PON overview</li>
-          <li>OLT / ONU interaction model</li>
-          <li>ONU provisioning and service flow</li>
-          <li>Common PON lab issues and troubleshooting</li>
+        <ul class="note-list">
+          <li>
+            <a href="pon/pon-overview.html">
+              PON Architecture & Service Flow Overview
+            </a>
+            <span class="meta">Fundamental</span>
+          </li>
         </ul>
+        <a class="btn small" href="pon/">View all PON notes</a>
       </div>
 
+
+
+      <li>
+        <a href="omci/omci-deep-dive-overview.html">
+          Understanding OMCI from Real-world PON Operations
+        </a>
+        <span class="meta">Deep Dive</span>
+      </li>
+
+      
+      <!-- OMCI -->
       <div class="card span6">
-        <h3>OMCI Protocol (ITU-T G.988)</h3>
-        <ul>
-          <li>OMCI message types and formats</li>
-          <li>Managed Entity (ME) structure</li>
-          <li>VLAN Tagging Operation Table decoding</li>
-          <li>OMCI packet capture and Wireshark analysis</li>
+        <h3>OMCI (ITU-T G.988)</h3>
+        <ul class="note-list">
+          <li>
+            <a href="omci/omci-intro.html">
+              OMCI Protocol Basics & Message Types
+            </a>
+            <span class="meta">Protocol</span>
+          </li>
+          <li>
+            <a href="omci/vlan-tagging-decoder.html">
+              VLAN Tagging Operation Table – Bit-level Decoding
+            </a>
+            <span class="meta">Deep Dive</span>
+          </li>
         </ul>
+        <a class="btn small" href="omci/">View all OMCI notes</a>
       </div>
 
+      <!-- Jenkins -->
       <div class="card span6">
-        <h3>Jenkins & Automation</h3>
-        <ul>
-          <li>Jenkins job design for lab automation</li>
-          <li>cron scheduling best practices</li>
-          <li>Job isolation per device</li>
-          <li>Failure visibility and retry strategy</li>
+        <h3>Jenkins Automation</h3>
+        <ul class="note-list">
+          <li>
+            <a href="jenkins/jenkins-olt-backup.html">
+              Designing Jenkins Jobs for OLT Configuration Backup
+            </a>
+            <span class="meta">Automation</span>
+          </li>
         </ul>
+        <a class="btn small" href="jenkins/">View all Jenkins notes</a>
       </div>
 
+      <!-- Automation -->
       <div class="card span6">
         <h3>Network Automation</h3>
-        <ul>
-          <li>SSH automation with Python</li>
-          <li>Configuration backup strategies</li>
-          <li>Multi-vendor device handling</li>
-          <li>Automation safety considerations</li>
+        <ul class="note-list">
+          <li>
+            <a href="automation/ssh-automation-patterns.html">
+              SSH Automation Patterns for Network Devices
+            </a>
+            <span class="meta">Best Practice</span>
+          </li>
         </ul>
+        <a class="btn small" href="automation/">View all automation notes</a>
       </div>
 
     </div>
