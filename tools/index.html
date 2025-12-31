@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Automation Tools | Selina Wu</title>
-  <meta name="description" content="Automation tools for PON, OMCI, WAN, TR-369, and AI-assisted packet analysis." />
+  <meta name="description" content="Automation tools for PON, OMCI, WAN, TR-369, and network testing." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
@@ -32,117 +32,85 @@
 
 <main>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container">
     <div class="kicker">Automation Tools</div>
     <h1>PON / WAN / TR-369 Automation Tools</h1>
     <p>
-      Practical automation tools developed for real-world network testing,
-      packet analysis, and protocol validation.<br><br>
-      原始碼依工具性質分為 Public / Private，
-      Private Repo 於需求時提供存取。
+      A curated list of automation tools developed for protocol analysis,
+      device testing, and network validation.<br><br>
+      工具依性質分為 Public / Private，Private Repo 可於需求時提供存取。
     </p>
-
-    <div class="searchbar" style="max-width:680px;">
-      <input data-filter-input placeholder="Filter tools: OMCI, VLAN, IPv6, AI, TR-369..." />
-      <span class="badge" data-filter-count></span>
-    </div>
   </div>
 </section>
 
-<!-- ================= TOOLS ================= -->
 <section>
   <div class="container">
-    <div class="grid" data-filter-list>
+    <div class="grid">
 
-      <!-- OMCI Parser (Private) -->
-      <div class="card span6" data-filter-item data-filter-text="omci parser g.988 wireshark pcap excel">
-        <h3>OMCI Parser & Analysis Tool</h3>
-        <p>Parses OMCI logs or PCAP files and exports Wireshark-aligned Excel reports.</p>
+      <div class="card span6">
+        <h3>Nokia 25G-PON OMCI Log & Packet Analysis Tool</h3>
+        <p>OMCI log / packet parsing and G.988 aligned decoding.</p>
         <div class="meta">
+          <span class="badge">25G-PON</span>
           <span class="badge">OMCI</span>
-          <span class="badge">G.988</span>
-          <span class="badge">Private Repo</span>
+          <span class="badge">Public</span>
         </div>
-        <p class="badge" style="margin-top:10px;">
-          Source code maintained in private repository
-        </p>
+        <a class="btn" href="https://github.com/selinawu0417/Nokia_25GPON_OMCI_log_parsing_and_OMCI_packets_analysis" target="_blank">View on GitHub</a>
       </div>
 
-      <!-- VLAN Tagging Decoder (Public) -->
-      <div class="card span6" data-filter-item data-filter-text="vlan tagging decoder omci bitwise">
+      <div class="card span6">
+        <h3>Nokia GPON OLT / ONT Test Tool</h3>
+        <p>Automation testing tool for Nokia GPON OLT / ONT devices.</p>
+        <div class="meta">
+          <span class="badge">GPON</span>
+          <span class="badge">OLT / ONT</span>
+          <span class="badge">Public</span>
+        </div>
+        <a class="btn" href="https://github.com/selinawu0417/Nokia_GPON_OLT_and_GPON_ONT_Test_Tool" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card span6">
         <h3>OMCI VLAN Tagging Decoder</h3>
-        <p>Bit-level decoding of VLAN Tagging Operation Table aligned with Wireshark.</p>
+        <p>Bit-level decoding of VLAN Tagging Operation Table.</p>
         <div class="meta">
-          <span class="badge">VLAN</span>
           <span class="badge">OMCI</span>
-          <span class="badge">Public Repo</span>
+          <span class="badge">VLAN</span>
+          <span class="badge">Public</span>
         </div>
-        <div style="margin-top:12px;">
-          <a class="btn" href="https://github.com/selinawu0417/Vlan_Tagging_Decoder" target="_blank">
-            View on GitHub
-          </a>
-        </div>
+        <a class="btn" href="https://github.com/selinawu0417/Vlan_Tagging_Decoder" target="_blank">View on GitHub</a>
       </div>
 
-      <!-- Network Ping Test (Public) -->
-      <div class="card span6" data-filter-item data-filter-text="network ping test icmp python">
+      <div class="card span6">
         <h3>Network Ping Test Tool</h3>
-        <p>Simple Python tool for network connectivity and latency validation.</p>
+        <p>Python-based network connectivity and latency checker.</p>
         <div class="meta">
           <span class="badge">Network</span>
           <span class="badge">Python</span>
-          <span class="badge">Public Repo</span>
+          <span class="badge">Public</span>
         </div>
-        <div style="margin-top:12px;">
-          <a class="btn" href="https://github.com/selinawu0417/network_ping_test" target="_blank">
-            View on GitHub
-          </a>
-        </div>
+        <a class="btn" href="https://github.com/selinawu0417/network_ping_test" target="_blank">View on GitHub</a>
       </div>
 
-      <!-- Hex-Dec-ASCII Converter (Public) -->
-      <div class="card span6" data-filter-item data-filter-text="hex dec ascii converter">
+      <div class="card span6">
         <h3>Hex / Dec / ASCII Converter</h3>
-        <p>Utility tool for converting between Hex, Decimal, and ASCII formats.</p>
+        <p>Utility tool for Hex / Decimal / ASCII conversion.</p>
         <div class="meta">
           <span class="badge">Utility</span>
-          <span class="badge">Python</span>
-          <span class="badge">Public Repo</span>
+          <span class="badge">Public</span>
         </div>
-        <div style="margin-top:12px;">
-          <a class="btn" href="https://github.com/selinawu0417/Hex-Dec-ASCII-Converter" target="_blank">
-            View on GitHub
-          </a>
-        </div>
+        <a class="btn" href="https://github.com/selinawu0417/Hex-Dec-ASCII-Convertor" target="_blank">View on GitHub</a>
       </div>
 
-      <!-- TR-369 USP Tool (Private) -->
-      <div class="card span6" data-filter-item data-filter-text="tr-369 usp mqtt agent controller">
-        <h3>TR-369 USP Agent Test Tool</h3>
-        <p>Validates USP Agent / Controller connectivity and message flow.</p>
+      <div class="card span6">
+        <h3>OMCI Parser & Analysis Tool</h3>
+        <p>Advanced OMCI parser with Excel / TestRail integration.</p>
         <div class="meta">
-          <span class="badge">TR-369</span>
-          <span class="badge">USP</span>
-          <span class="badge">Private Repo</span>
+          <span class="badge">OMCI</span>
+          <span class="badge">Private</span>
         </div>
-        <p style="margin-top:10px; color:var(--muted); font-size:13px;">
+        <p style="color:var(--muted); font-size:13px;">
           Source code available upon request
-        </p>
-      </div>
-
-      <!-- OLT Config Backup (Private) -->
-      <div class="card span6" data-filter-item data-filter-text="olt config backup ssh nokia huawei">
-        <h3>OLT Configuration Backup Tool</h3>
-        <p>Automated OLT configuration collection via SSH.</p>
-        <div class="meta">
-          <span class="badge">OLT</span>
-          <span class="badge">SSH</span>
-          <span class="badge">Private Repo</span>
-        </div>
-        <p style="margin-top:10px; color:var(--muted); font-size:13px;">
-          Multi-vendor (Nokia / Huawei)
         </p>
       </div>
 
@@ -157,8 +125,8 @@
     <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
       <div>© <span id="year"></span> Selina Wu</div>
       <div>
-        <a href="../projects/index.html">Projects</a> •
-        <a href="../index.html">Home</a>
+        <a href="../index.html">Home</a> •
+        <a href="../projects/index.html">Projects</a>
       </div>
     </div>
   </div>
