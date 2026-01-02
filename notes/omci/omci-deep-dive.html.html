@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OMCI Deep Dive | Selina Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="../../index.html">Automation Notes</a>
+      <div class="navlinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../tools/index.html">Tools</a>
+        <a href="../index.html">Notes</a>
+        <a href="../../projects/index.html">Projects</a>
+        <a href="../../about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="kicker">OMCI</div>
+    <h1>OMCI Deep Dive: From Spec to Real Deployment</h1>
+    <p>How OMCI actually works in GPON / 25G-PON lab environments.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why OMCI Is the Core of PON Services</h2>
+    <p>
+      OMCI (ONT Management and Control Interface) defined in ITU-T G.988
+      is not just a management protocol — it is the mechanism that
+      translates service intent into ONU behavior.
+    </p>
+    <p>
+      Every Internet, IPTV, or VoIP service delivered via PON
+      ultimately depends on OMCI Managed Entity (ME) configuration.
+    </p>
+
+    <h2>Managed Entities as Configuration Objects</h2>
+    <p>
+      Unlike CLI-based configuration, OMCI uses Managed Entities.
+      Each ME represents a logical object with fixed attributes.
+    </p>
+    <ul>
+      <li>Class ID defines object type</li>
+      <li>Entity ID identifies instance</li>
+      <li>Attributes encode configuration and state</li>
+    </ul>
+
+    <h2>Operational Reality</h2>
+    <p>
+      In real deployments, debugging OMCI means correlating:
+    </p>
+    <ul>
+      <li>OMCI packet sequence</li>
+      <li>OLT provisioning logic</li>
+      <li>Vendor-specific ONU behavior</li>
+    </ul>
+    <p>
+      This is why packet-level analysis tools and automation
+      are essential.
+    </p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">© Selina Wu</div>
+</footer>
+
+</body>
+</html>
